@@ -2,12 +2,12 @@
 
 # Definition
 
-Basic building block of higher level data structures, an array is a ordered collection of data grouped together under one name. Data is accessed by means of numeric indexes. Unlike other list-like data structures, arrays are stored in a sequential memory.
+Basic building block of higher level data structures, an array is a ordered collection of data grouped together under one name. Data is accessed by means of numeric indexes. Unlike other list-like data structures, arrays are stored in sequential memory.
 
 ## Caveats
 
-- Some implementations allow only homogeneous (same type) where as others allow homogeneous (different)
-- Some arrays are dynamic meaning they can grow to accommodate new data, others are static meaning the size must be defined at the start.
+- Some implementations allow only homogeneous (same type) data where as others allow homogeneous (different types) data to be stored
+- Some arrays are dynamic, meaning they can grow to accommodate new data, others are static, meaning the size must be defined at the start.
 
 ## ADT
 
