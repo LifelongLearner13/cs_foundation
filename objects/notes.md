@@ -81,6 +81,48 @@ for (let key in obj) {
 }
 ```
 
+#### Inheritance
+
+Means of creating a specialized (aka child) class from a general (aka parent) class. JavaScript only supports single inheritance.
+
+```javascript
+// Parent constructor
+let Animal = function(name) {
+  this.name = name;
+};
+
+// Add methods to the parent's prototype
+Animal.prototype.sayHello = function() {
+  console.log("Hi, I am a " + this.name);
+};
+
+// Define child prototype that inherits from parent
+function Mammal(name, numFeet) {
+  // Call the parent constructor, using call to ensure this
+  // is bound correctly.
+  Animal.call(this, name);
+
+  // Initialize our Student-specific properties
+  this.numFeet = numFeet;
+}
+
+// Create a Student.prototype object that inherits from Person.prototype.
+Student.prototype = Object.create(Animal.prototype);
+
+// Reassign constructor after previous line overwrote info
+Student.prototype.constructor = Student;
+
+// Overwrite inherited method
+Student.prototype.sayHello = function(){
+  console.log("Hello, I am a " + this.name + " and I have "
+              + this.numFeet + " feet.");
+};
+```
+
+#### Creating methods on Prototype vs. actual object
+
+Methods added directly to a constructor will be copied/recreated for every new instance created from the constructor. On the other hand, methods added to the prototype are created once. By assigning methods to the prototype, we save memory and can update the prototype later to include more functionality.
+
 #### Methods to remember
 
 - `Object.getPrototypeOf()`
@@ -97,3 +139,6 @@ for (let key in obj) {
   - Example: `Object.defineProperty(Object.prototype, "hiddenNonsense",{enumerable: false, value: "hi"});`
 
 ## Resources:
+
+- Eloquent Javascript by Marijn Haverbeke - [Chapter 6: The Secret Life of Objects](http://eloquentjavascript.net/06_object.html)
+- [Introduction to Object-Oriented JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
