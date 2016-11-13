@@ -11,7 +11,6 @@ function insertionSort(numArr) {
             j--;
         }
         numArr[j + 1] = key;
-        console.log(numArr.join(' '));
     }
     return numArr;
 }
@@ -19,7 +18,7 @@ function insertionSort(numArr) {
 function processData(input) {
     let data = input.split('\n');
     let arr = data[1].split(' ').map(n => parseInt(n, 10));
-    insertionSort(arr);
+    console.log(insertionSort(arr));
 }
 
 process.stdin.resume();
