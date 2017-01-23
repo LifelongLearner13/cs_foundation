@@ -1,6 +1,4 @@
-/*
- * Source: https://gist.github.com/oampo
- */
+/* Source: https://gist.github.com/oampo */
 let Memory = require('./fake_memory');
 
 let memory = new Memory();
@@ -18,6 +16,8 @@ Array.prototype.push = function(value) {
         this._resize((this.length + 1) * Array.SIZE_RATIO);
     }
 
+    // this.ptr points to the first slot in memory, so
+    // this line is adding value to the end of the array.
     memory.set(this.ptr + this.length, value);
     this.length++;
 };
