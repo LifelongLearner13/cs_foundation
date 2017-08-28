@@ -2,7 +2,7 @@
 
 ## Definition
 
-Data structure that maps values to keys (i.e. associates data with a "search term"). Keys can be of any hash-able type. Optimized for insertion, deletion, and retrieval.
+Data structure that maps values to keys (i.e. associates data with a "search term"). Keys can be of any hash-able type. 
 
 ### Hashing
 
@@ -20,3 +20,15 @@ Depending on the hash function different data may hash to the same index, this i
   - Although simple, this wastes space.
 - Separate Chaining
   - Each slot in the table contains a linked-list
+
+## Uses
+- Optimized for insertion, deletion, and retrieval.
+- Good choice for implementing symbol tables
+
+## HashTable ADT
+- CreatHashTable: Creates a new hash table
+- HashSearch: Searches the key in hash table
+- HashInsert: Inserts a new key into hash table
+- HashDelete: Deletes a key from hash table
+- DeleteHashTable: Deletes the hash table
+
