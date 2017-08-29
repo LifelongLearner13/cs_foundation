@@ -45,19 +45,19 @@
 
     - Supports whole numbers
 
-|  Type | Size (bits) |       Min Value      |      Max Value      | Literal Format |
-|:-----:|:-----------:|:--------------------:|:-------------------:|:--------------:|
-|  byte |      8      |         -128         |         127         |        0       |
-| short |      16     |        -32768        |        32767        |        0       |
-|  int  |      32     |      -2147483648     |      2147483647     |        0       |
-|  long |      64     | -9223372036854775808 | 9223372036854775807 |       0L       |
+| Type  | Size (bits) | Min Value            | Max Value           | Literal Format |
+| :---: | :---------: | :------------------: | :-----------------: | :------------: |
+| byte  | 8           | -128                 | 127                 | 0              |
+| short | 16          | -32768               | 32767               | 0              |
+| int   | 32          | -2147483648          | 2147483647          | 0              |
+| long  | 64          | -9223372036854775808 | 9223372036854775807 | 0L             |
 
 ###Floating Point
 
     - Supports positive, negative, and zero with fractional parts
 
 | Type   | Size (bits) | Smallest Positive Value | Largest Positive Value | Literal Format |
-|--------|-------------|-------------------------|------------------------|----------------|
+| ------ | ----------- | ----------------------- | ---------------------- | -------------- |
 | float  | 32          | 1.4 x 10^-45            | 3.4 x 10^38            | 0.0f           |
 | double | 64          | 4.9 x 10^-324           | 1.7 x 10^308           | 0.0 or 0.0d    |
 
@@ -176,11 +176,11 @@
     - Achieved through access modifiers
     - Field encapsulation is achieved through `getters` and `setters` (this is an example of the Accessor and Mutator Design pattern).
 
-|   Modifier  |                      Visibility                      | Usable on Classes | Usable on Members |
-|:-----------:|:----------------------------------------------------:|:-----------------:|:-----------------:|
-| no modifier | package private (i.e. only available inside package) |         Y         |         Y         |
-|    public   |                      Everywhere                      |         Y         |         Y         |
-|   private   |               Only within its own class              |         Y         |         N         |
+| Modifier    | Visibility                                           | Usable on Classes | Usable on Members |
+| :---------: | :--------------------------------------------------: | :---------------: | :---------------: |
+| no modifier | package private (i.e. only available inside package) | Y                 | Y                 |
+| public      | Everywhere                                           | Y                 | Y                 |
+| private     | Only within its own class                            | Y                 | N                 |
 
 - Overloading
     - A class may have multiple versions of its constructor or methods, differentiated by their method signatures (i.e. number/type of parameters).
@@ -293,6 +293,22 @@
 ### Interface
 
 - Defines a contract
-    - Key difference between interface and class is the interface provides no implementation
+  - Key difference between interface and class is the interface provides no implementation
     - By implementing an interface, a class conforms to the interfaces contract
-        - 
+      - As long as the class returns the expected type, the interface does not limit the class's implementation
+      - Some interfaces require addional type information
+        - Uses a concept know as generics
+        - If a generic is specified, the method will recive that type, else it will recieve an object which needs to be cased.
+      - A class can only extend one parent class, but it can implement multiple interfaces
+    - When declaring an interface, use the `interface` keyword
+      - Supports a subset of the features available to classes
+        - Methods
+          - Only the declaration, no implementation
+          - implicitly public
+        - Constants
+          - Typed named values
+          - implicitly public, final, static
+        - Extending interfaces
+          - An interface can extend another interface
+        - Implementing extended interface implies implentation of base
+      - 
