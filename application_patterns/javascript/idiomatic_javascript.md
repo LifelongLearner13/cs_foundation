@@ -32,4 +32,4 @@ Namespaces reduce/elliminate nameing collisions by providing a way of ecapsolati
 
 ### References
 
-- [Essential JavaScript Namespacing Patterns](https://addyosmani.com/blog/essential-js-namespacing/)
+- https://addyosmani.com/resources/essentialjsdesignpatterns/book/index.html#detailnamespacing
