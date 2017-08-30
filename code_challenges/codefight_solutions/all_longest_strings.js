@@ -1,15 +1,7 @@
 /*
  * Source: CodeFights - Arcade Intro: Smooth Sailing
  * 
- * Question:
- *  Given an array of strings, return another array 
- *  containing all of its longest strings.
- * 
- * Example:
- *  Input: ["aba", "aa", "ad", "vcd", "aba"]
- *  Output: ["aba", "vcd", "aba"]
- * 
- * Take Aways:
+ * Takeaways:
  *  - Used a greedy approach, but could have used
  *    a combination of `Math.max` and `Array.filter`
  */

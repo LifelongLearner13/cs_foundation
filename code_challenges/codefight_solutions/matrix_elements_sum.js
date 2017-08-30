@@ -1,26 +1,8 @@
 /*
  * Source: CodeFights - Arcade Intro: Edge of the Ocean
  * 
- * Question:
- *  After becoming famous, CodeBots decided to move to a
- *  new building and live together. The building is represented
- *  by a rectangular matrix of rooms, each cell containing an
- *  integer - the price of the room. Some rooms are free (their
- *  cost is 0), but that's probably because they are haunted, so
- *  all the bots are afraid of them. That is why any room that
- *  is free or is located anywhere below a free room in the same
- *  column is not considered suitable for the bots.
- *  Help the bots calculate the total price of all the rooms 
- *  that are suitable for them.
- * 
- * Example:
- *  Input: [0, 1, 1, 2], 
- *         [0, 5, 0, 0], 
- *         [2, 0, 3, 3];
- *  Output: 9
- * 
- * Take Aways:
- *  - Start with a brute force approach, then try to elliminate 
+ * Takeaways:
+ *  - Start with a brute force approach, then try to eliminate 
  *    duplicate work
  *      - For this problem, we don't really care about the location
  *        of the zeros, just that we don't count what comes after 
