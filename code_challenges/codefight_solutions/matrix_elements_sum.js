@@ -1,4 +1,4 @@
-/**
+/*
  * Source: CodeFights - Arcade Intro: Edge of the Ocean
  * 
  * Question:
