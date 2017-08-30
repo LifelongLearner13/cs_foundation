@@ -1,26 +1,28 @@
 /*
-  Source: CodeFights - Arcade Intro: Edge of the Ocean
-  
-  Question:
-  Given a sequence of integers as an array, determine
-  whether it is possible to obtain a strictly increasing
-  sequence by removing no more than one element from the
-  array.
-
-  Example:
-    Input: [1, 3, 2, 1]
-    Output: False
-
-    Input: [1, 4, 6, 2]
-    Output: True
-
-  Take Aways:
-    - If you're having trouble finding a solution using a 
-      boolean flag, try an interager counter.
-    - Consider both directions. 
-    - Solution based off of redpix_ submission.
+ * Source: CodeFights - Arcade Intro: Edge of the Ocean
+ *
+ * Question:
+ * Given a sequence of integers as an array, determine
+ * whether it is possible to obtain a strictly increasing
+ * sequence by removing no more than one element from the
+ * array.
+ *
+ * Example:
+ *  Input: [1, 3, 2, 1]
+ *  Output: False
+ *
+ * Input: [1, 4, 6, 2]
+ * Output: True
+ *
+ * Take Aways:
+ * - If you're having trouble finding a solution using a 
+ *   boolean flag, try an interager counter.
+ * - Consider both directions. 
+ * - Solution based off of redpix_ submission.
 */ 
 
+// Time: O(n)
+// Space: O(1)
 function almostIncreasingSequence(sequence) {
   // A sequence of one always increases.
   // A sequence of two only requires one deletion.
@@ -43,7 +45,7 @@ function almostIncreasingSequence(sequence) {
               // it's an automatic false because it means we would need to
               // delete two numbers.
               return false;
-          } else{
+          } else {
               // Typical error
               if(error) return false;
               error = true;
