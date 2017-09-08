@@ -5,6 +5,8 @@ import org.junit.runners.Suite;
 import com.sierragregg.cci_c1.*;
 import com.sierragregg.cci_c2.*;
 
+// Reference: Aggregating tests in suites 
+// (https://github.com/junit-team/junit4/wiki/aggregating-tests-in-suites) 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
   C1Question1Test.class,
@@ -16,6 +18,7 @@ import com.sierragregg.cci_c2.*;
   C1Question7Test.class,
   C1Question8Test.class,
   C1Question9Test.class,
+  C2Question1Test.class,
 })
 
 public class AllTests {
