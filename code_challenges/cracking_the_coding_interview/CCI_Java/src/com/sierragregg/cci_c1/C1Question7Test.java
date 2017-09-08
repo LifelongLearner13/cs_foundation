@@ -1,4 +1,4 @@
-package com.sierragregg.cci_c1q7;
+package com.sierragregg.cci_c1;
 
 import static org.junit.Assert.*;
 

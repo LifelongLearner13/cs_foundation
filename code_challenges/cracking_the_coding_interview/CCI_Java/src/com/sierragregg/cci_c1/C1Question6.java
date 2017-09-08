@@ -1,4 +1,4 @@
-package com.sierragregg.cci_c1q6;
+package com.sierragregg.cci_c1;
 
 /**
  * Cracking the Coding Interview e6 by Gayle Laakmann McDowell

@@ -1,8 +1,8 @@
-package com.sierragregg.cci_c2q1;
+package com.sierragregg.cci_c2;
 
 import java.util.HashSet;
 
-public class Chapter2Question1 {
+public class C2Question1 {
 	private Node head;
 	 
     private class Node {
@@ -16,7 +16,7 @@ public class Chapter2Question1 {
         }
     }
     
-    Chapter2Question1() {
+    C2Question1() {
     	head = null;
     }
     
@@ -84,7 +84,7 @@ public class Chapter2Question1 {
     }
 	
     public static void main(String[] args) {
-    	Chapter2Question1 sll = new Chapter2Question1();
+    	C2Question1 sll = new C2Question1();
     	System.out.println(sll);
     	sll.insertNode(4);
     	sll.insertNode(5);
